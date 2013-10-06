@@ -5,6 +5,8 @@
 ** Forum
 =====
 
+	* http://docs.django-cms.org/en/2.4.2/getting_started/configuration.html#cms-max-page-publish-reversions
+
 ** Gallery
 =======
 
@@ -14,6 +16,8 @@
 ** That all under ACL/s
 ====================
 
+	* http://docs.django-cms.org/en/2.4.2/getting_started/configuration.html#cms-public-for
+	* http://docs.django-cms.org/en/2.4.2/getting_started/configuration.html#cms-permission
 
 =====
 * REF/s
