@@ -55,6 +55,9 @@ google-docs: dc-motylek (dm) - webovky
         * http://ilian.i-n-i.org/tag/django-cms/
 	* cms uninstall apphooks (http://docs.django-cms.org/en/2.4.2/advanced/cli.html#cms-uninstall)
 
+*** 1st-own try: $> pip install django-cms django-blog-zinnia imagestore django-reversion django-menu django-tagging djangorecipe zc.buildout
+	- prerq: virtualenv env && source env/bin/activate
+
 *** http://docs.django-cms.org/en/2.4.2/extending_cms/placeholders.html
 Placeholders are special model fields that django CMS uses to render user-editable content (plugins) in templates. That is, it’s the place where a user can add text, video or any other plugin to a webpage, using either the normal Django admin interface or the so called frontend editing.
 
