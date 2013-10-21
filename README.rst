@@ -11,6 +11,7 @@
 ** Gallery
 =======
 try:
+	* https://imagestore.readthedocs.org/en/latest/install.html
 	* https://github.com/stefanfoulis/django-filer
 
 
