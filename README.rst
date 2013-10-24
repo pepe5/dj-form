@@ -56,7 +56,7 @@ google-docs: dc-motylek (dm) - webovky
         * http://ilian.i-n-i.org/tag/django-cms/
 	* cms uninstall apphooks (http://docs.django-cms.org/en/2.4.2/advanced/cli.html#cms-uninstall)
 
-*** 1st-own try: $> pip install django-cms django-blog-zinnia imagestore django-reversion django-menu django-tagging djangorecipe zc.buildout
+*** 1st-own try: $> pip install django-cms django-blog-zinnia imagestore django-reversion django-menu django-tagging djangorecipe zc.buildout django-autocomplete-light
 	- prerq: virtualenv env && source env/bin/activate
 
 *** http://docs.django-cms.org/en/2.4.2/extending_cms/placeholders.html

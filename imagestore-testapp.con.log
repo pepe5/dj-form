@@ -1,0 +1,301 @@
+tmp$> cd ~/tmp/imagestore
+imagestore$> python manage.py runserver
+python: can't open file 'manage.py': [Errno 2] No such file or directory
+
+imagestore$> cd ~/tmp/imagestore/test/testapp/
+testapp$> python manage.py runserver
+/usr/lib/python2.6/site-packages/django/conf/__init__.py:75: DeprecationWarning: The ADMIN_MEDIA_PREFIX setting has been removed; use STATIC_URL instead.
+  "use STATIC_URL instead.", DeprecationWarning)
+/usr/lib/python2.6/site-packages/django/conf/__init__.py:75: DeprecationWarning: The ADMIN_MEDIA_PREFIX setting has been removed; use STATIC_URL instead.
+  "use STATIC_URL instead.", DeprecationWarning)
+Validating models...
+
+Unhandled exception in thread started by <bound method Command.inner_run of <django.contrib.staticfiles.management.commands.runserver.Command object at 0x2861250>>
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/django/core/management/commands/runserver.py", line 91, in inner_run
+    self.validate(display_num_errors=True)
+  File "/usr/lib/python2.6/site-packages/django/core/management/base.py", line 266, in validate
+    num_errors = get_validation_errors(s, app)
+  File "/usr/lib/python2.6/site-packages/django/core/management/validation.py", line 30, in get_validation_errors
+    for (app_name, error) in get_app_errors().items():
+  File "/usr/lib/python2.6/site-packages/django/db/models/loading.py", line 158, in get_app_errors
+    self._populate()
+  File "/usr/lib/python2.6/site-packages/django/db/models/loading.py", line 64, in _populate
+    self.load_app(app_name, True)
+  File "/usr/lib/python2.6/site-packages/django/db/models/loading.py", line 88, in load_app
+    models = import_module('.models', app_name)
+  File "/usr/lib/python2.6/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/mnt/lifeboat-home/kraljo/tmp/imagestore/imagestore/models/__init__.py", line 9, in <module>
+    Image = load_class(getattr(settings, 'IMAGESTORE_IMAGE_MODEL', 'imagestore.models.image.Image'))
+  File "/mnt/lifeboat-home/kraljo/tmp/imagestore/imagestore/utils.py", line 38, in load_class
+    raise ImproperlyConfigured(txt)
+django.core.exceptions.ImproperlyConfigured: Error importing backend imagestore.models.image: "cannot import name parse_lookup".
+  C-c C-c
+
+testapp$> cp -r ~/text/dc_motylek/env/ .
+testapp$> du -sh ~/text/dc_motylek/env/ .
+82M	/home/kraljo/text/dc_motylek/env/
+82M	.
+
+testapp$> source env/bin/activate
+(env)testapp$> python manage.py runserver
+/mnt/lifeboat-home/kraljo/text/dc_motylek/env/lib/python2.6/site-packages/django/core/management/__init__.py:465: DeprecationWarning: The 'execute_manager' function is deprecated, you likely need to update your 'manage.py'; please see the Django 1.4 release notes (https://docs.djangoproject.com/en/dev/releases/1.4/).
+  DeprecationWarning)
+/mnt/lifeboat-home/kraljo/text/dc_motylek/env/lib/python2.6/site-packages/django/core/management/__init__.py:409: DeprecationWarning: The 'setup_environ' function is deprecated, you likely need to update your 'manage.py'; please see the Django 1.4 release notes (https://docs.djangoproject.com/en/dev/releases/1.4/).
+  DeprecationWarning)
+ImportError: No module named autocomplete_light
+
+(env)testapp$> pip install django-autocomplete-light
+Downloading/unpacking django-autocomplete-light
+  Downloading django-autocomplete-light-1.4.4.tar.gz (49kB): 49kB downloaded
+  Running setup.py egg_info for package django-autocomplete-light
+    processing file django.po in /mnt/lifeboat-home/kraljo/text/dc_motylek/env/build/django-autocomplete-light/autocomplete_light/locale/hr/LC_MESSAGES
+    processing file django.po in /mnt/lifeboat-home/kraljo/text/dc_motylek/env/build/django-autocomplete-light/autocomplete_light/locale/es/LC_MESSAGES
+    processing file django.po in /mnt/lifeboat-home/kraljo/text/dc_motylek/env/build/django-autocomplete-light/autocomplete_light/locale/it/LC_MESSAGES
+    processing file django.po in /mnt/lifeboat-home/kraljo/text/dc_motylek/env/build/django-autocomplete-light/autocomplete_light/locale/pt-br/LC_MESSAGES
+    processing file django.po in /mnt/lifeboat-home/kraljo/text/dc_motylek/env/build/django-autocomplete-light/autocomplete_light/locale/cs/LC_MESSAGES
+    processing file django.po in /mnt/lifeboat-home/kraljo/text/dc_motylek/env/build/django-autocomplete-light/autocomplete_light/locale/ru/LC_MESSAGES
+    processing file django.po in /mnt/lifeboat-home/kraljo/text/dc_motylek/env/build/django-autocomplete-light/autocomplete_light/locale/pl/LC_MESSAGES
+    processing file django.po in /mnt/lifeboat-home/kraljo/text/dc_motylek/env/build/django-autocomplete-light/autocomplete_light/locale/fr/LC_MESSAGES
+Installing collected packages: django-autocomplete-light
+  Running setup.py install for django-autocomplete-light
+    processing file django.po in /mnt/lifeboat-home/kraljo/text/dc_motylek/env/build/django-autocomplete-light/autocomplete_light/locale/hr/LC_MESSAGES
+    processing file django.po in /mnt/lifeboat-home/kraljo/text/dc_motylek/env/build/django-autocomplete-light/autocomplete_light/locale/es/LC_MESSAGES
+    processing file django.po in /mnt/lifeboat-home/kraljo/text/dc_motylek/env/build/django-autocomplete-light/autocomplete_light/locale/it/LC_MESSAGES
+    processing file django.po in /mnt/lifeboat-home/kraljo/text/dc_motylek/env/build/django-autocomplete-light/autocomplete_light/locale/pt-br/LC_MESSAGES
+    processing file django.po in /mnt/lifeboat-home/kraljo/text/dc_motylek/env/build/django-autocomplete-light/autocomplete_light/locale/cs/LC_MESSAGES
+    processing file django.po in /mnt/lifeboat-home/kraljo/text/dc_motylek/env/build/django-autocomplete-light/autocomplete_light/locale/ru/LC_MESSAGES
+    processing file django.po in /mnt/lifeboat-home/kraljo/text/dc_motylek/env/build/django-autocomplete-light/autocomplete_light/locale/pl/LC_MESSAGES
+    processing file django.po in /mnt/lifeboat-home/kraljo/text/dc_motylek/env/build/django-autocomplete-light/autocomplete_light/locale/fr/LC_MESSAGES
+Successfully installed django-autocomplete-light
+Cleaning up...
+
+(env)testapp$> python manage.py runserver
+/mnt/lifeboat-home/kraljo/text/dc_motylek/env/lib/python2.6/site-packages/django/core/management/__init__.py:465: DeprecationWarning: The 'execute_manager' function is deprecated, you likely need to update your 'manage.py'; please see the Django 1.4 release notes (https://docs.djangoproject.com/en/dev/releases/1.4/).
+  DeprecationWarning)
+/mnt/lifeboat-home/kraljo/text/dc_motylek/env/lib/python2.6/site-packages/django/core/management/__init__.py:409: DeprecationWarning: The 'setup_environ' function is deprecated, you likely need to update your 'manage.py'; please see the Django 1.4 release notes (https://docs.djangoproject.com/en/dev/releases/1.4/).
+  DeprecationWarning)
+/mnt/lifeboat-home/kraljo/text/dc_motylek/env/lib/python2.6/site-packages/django/core/management/__init__.py:465: DeprecationWarning: The 'execute_manager' function is deprecated, you likely need to update your 'manage.py'; please see the Django 1.4 release notes (https://docs.djangoproject.com/en/dev/releases/1.4/).
+  DeprecationWarning)
+/mnt/lifeboat-home/kraljo/text/dc_motylek/env/lib/python2.6/site-packages/django/core/management/__init__.py:409: DeprecationWarning: The 'setup_environ' function is deprecated, you likely need to update your 'manage.py'; please see the Django 1.4 release notes (https://docs.djangoproject.com/en/dev/releases/1.4/).
+  DeprecationWarning)
+Validating models...
+
+0 errors found
+October 24, 2013 - 23:14:12
+Django version 1.5.4, using settings 'testapp.settings'
+Development server is running at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[24/Oct/2013 23:14:18] "GET / HTTP/1.1" 500 209621
+~bg
+[1]+ python manage.py runserver &
+
+(env)testapp$> python manage.py syncdb
+/mnt/lifeboat-home/kraljo/text/dc_motylek/env/lib/python2.6/site-packages/django/core/management/__init__.py:465: DeprecationWarning: The 'execute_manager' function is deprecated, you likely need to update your 'manage.py'; please see the Django 1.4 release notes (https://docs.djangoproject.com/en/dev/releases/1.4/).
+  DeprecationWarning)
+/mnt/lifeboat-home/kraljo/text/dc_motylek/env/lib/python2.6/site-packages/django/core/management/__init__.py:409: DeprecationWarning: The 'setup_environ' function is deprecated, you likely need to update your 'manage.py'; please see the Django 1.4 release notes (https://docs.djangoproject.com/en/dev/releases/1.4/).
+  DeprecationWarning)
+Syncing...
+Creating tables ...
+Creating table auth_permission
+Creating table auth_group_permissions
+Creating table auth_group
+Creating table auth_user_groups
+Creating table auth_user_user_permissions
+Creating table auth_user
+Creating table django_content_type
+Creating table django_session
+Creating table django_site
+Creating table django_admin_log
+Creating table thumbnail_kvstore
+Creating table tagging_tag
+Creating table tagging_taggeditem
+Creating table south_migrationhistory
+
+You just installed Django's auth system, which means you don't have any superusers defined.
+Would you like to create one now? (yes/no): yes
+Username (leave blank to use 'kraljo'): 
+Email address: pepe5@email.cz
+pepe5@email.cz
+Password: pepe5-image
+Password (again): pepe5-image
+
+Superuser created successfully.
+Installing custom SQL ...
+Installing indexes ...
+Installed 0 object(s) from 0 fixture(s)
+
+Synced:
+ > django.contrib.auth
+ > django.contrib.contenttypes
+ > django.contrib.sessions
+ > django.contrib.sites
+ > django.contrib.messages
+ > django.contrib.admin
+ > django.contrib.admindocs
+ > django.contrib.staticfiles
+ > sorl.thumbnail
+ > tagging
+ > autocomplete_light
+ > south
+
+Not synced (use migrations):
+ - imagestore
+(use ./manage.py migrate to migrate these)
+
+(env)testapp$> python manage.py migrate
+/mnt/lifeboat-home/kraljo/text/dc_motylek/env/lib/python2.6/site-packages/django/core/management/__init__.py:465: DeprecationWarning: The 'execute_manager' function is deprecated, you likely need to update your 'manage.py'; please see the Django 1.4 release notes (https://docs.djangoproject.com/en/dev/releases/1.4/).
+  DeprecationWarning)
+/mnt/lifeboat-home/kraljo/text/dc_motylek/env/lib/python2.6/site-packages/django/core/management/__init__.py:409: DeprecationWarning: The 'setup_environ' function is deprecated, you likely need to update your 'manage.py'; please see the Django 1.4 release notes (https://docs.djangoproject.com/en/dev/releases/1.4/).
+  DeprecationWarning)
+Running migrations for imagestore:
+ - Migrating forwards to 0014_fix_album_name_length.
+ > imagestore:0001_initial
+ > imagestore:0002_removeslug
+ > imagestore:0003_adduser
+ > imagestore:0004_nonullorder
+ > imagestore:0005_addalbum
+ > imagestore:0006_addcreatedupdated
+ > imagestore:0007_albumfix
+ > imagestore:0008_permissions
+ - Migration 'imagestore:0008_permissions' is marked for no-dry-run.
+Adding permission 'imagestore | Album | Can add Album'
+Adding permission 'imagestore | Album | Can change Album'
+Adding permission 'imagestore | Album | Can delete Album'
+Adding permission 'imagestore | Album | View, update and delete any album'
+Adding permission 'imagestore | Image | Can add Image'
+Adding permission 'imagestore | Image | Can change Image'
+Adding permission 'imagestore | Image | Can delete Image'
+Adding permission 'imagestore | Image | View, update and delete any image'
+Adding permission 'imagestore | Album upload | Can add Album upload'
+Adding permission 'imagestore | Album upload | Can change Album upload'
+Adding permission 'imagestore | Album upload | Can delete Album upload'
+ > imagestore:0009_limits
+ > imagestore:0010_addplace
+ > imagestore:0011_add_mass_upload
+ > imagestore:0012_add_order
+ > imagestore:0013_fix_album_title_length
+ > imagestore:0014_fix_album_name_length
+ - Loading initial data for imagestore.
+Installed 0 object(s) from 0 fixture(s)
+
+(env)testapp$> [24/Oct/2013 23:16:03] "GET / HTTP/1.1" 200 6044
+[24/Oct/2013 23:16:03] "GET /media/static/css/style.css HTTP/1.1" 404 1655
+[24/Oct/2013 23:16:03] "GET /media/static/autocomplete_light/remote.js HTTP/1.1" 200 1329
+[24/Oct/2013 23:16:03] "GET /media/static/csrf.js HTTP/1.1" 200 925
+[24/Oct/2013 23:16:03] "GET /media/static/autocomplete_light/style.css HTTP/1.1" 200 2788
+[24/Oct/2013 23:16:03] "GET /media/static/autocomplete_light/addanother.js HTTP/1.1" 200 3667
+[24/Oct/2013 23:16:03] "GET /media/static/autocomplete_light/text_widget.js HTTP/1.1" 200 8440
+[24/Oct/2013 23:16:03] "GET /media/static/autocomplete_light/widget.js HTTP/1.1" 200 14159
+[24/Oct/2013 23:16:03] "GET /media/static/autocomplete_light/autocomplete.js HTTP/1.1" 200 19080
+[24/Oct/2013 23:17:38] "GET / HTTP/1.1" 200 6044
+[24/Oct/2013 23:17:38] "GET /media/static/css/style.css HTTP/1.1" 404 1655
+[24/Oct/2013 23:17:38] "GET /media/static/autocomplete_light/addanother.js HTTP/1.1" 304 0
+[24/Oct/2013 23:17:38] "GET /media/static/autocomplete_light/autocomplete.js HTTP/1.1" 304 0
+[24/Oct/2013 23:17:38] "GET /media/static/autocomplete_light/widget.js HTTP/1.1" 304 0
+[24/Oct/2013 23:17:38] "GET /media/static/autocomplete_light/remote.js HTTP/1.1" 304 0
+[24/Oct/2013 23:17:38] "GET /media/static/autocomplete_light/style.css HTTP/1.1" 304 0
+[24/Oct/2013 23:17:38] "GET /media/static/autocomplete_light/text_widget.js HTTP/1.1" 304 0
+[24/Oct/2013 23:17:38] "GET /media/static/csrf.js HTTP/1.1" 304 0
+[24/Oct/2013 23:18:00] "GET /media/imagestore/14998a8e-09fd-481f-94bf-b751562bc6c8.gif HTTP/1.1" 404 1753
+[24/Oct/2013 23:18:06] "GET /gallery/ HTTP/1.1" 200 5442
+[24/Oct/2013 23:18:06] "GET /media/static/css/style.css HTTP/1.1" 404 1655
+[24/Oct/2013 23:18:06] "GET /media/static/autocomplete_light/autocomplete.js HTTP/1.1" 304 0
+[24/Oct/2013 23:18:06] "GET /media/static/autocomplete_light/addanother.js HTTP/1.1" 304 0
+[24/Oct/2013 23:18:06] "GET /media/static/autocomplete_light/widget.js HTTP/1.1" 304 0
+[24/Oct/2013 23:18:06] "GET /media/static/autocomplete_light/text_widget.js HTTP/1.1" 304 0
+[24/Oct/2013 23:18:06] "GET /media/static/autocomplete_light/remote.js HTTP/1.1" 304 0
+[24/Oct/2013 23:18:06] "GET /media/static/autocomplete_light/style.css HTTP/1.1" 304 0
+[24/Oct/2013 23:19:08] "GET /admin/ HTTP/1.1" 200 1906
+[24/Oct/2013 23:19:23] "POST /admin/ HTTP/1.1" 302 0
+[24/Oct/2013 23:19:23] "GET /admin/ HTTP/1.1" 200 5699
+[24/Oct/2013 23:19:31] "GET /admin/imagestore/albumupload/add/ HTTP/1.1" 200 5319
+[24/Oct/2013 23:19:31] "GET /admin/jsi18n/ HTTP/1.1" 200 5169
+[24/Oct/2013 23:19:47] "GET /admin/imagestore/album/add/?_popup=1 HTTP/1.1" 200 7439
+[24/Oct/2013 23:19:47] "GET /admin/jsi18n/ HTTP/1.1" 200 5169
+[24/Oct/2013 23:19:56] "POST /admin/imagestore/album/add/?_popup=1 HTTP/1.1" 200 160
+1.gif
+10.gif
+11.gif
+12.gif
+13.gif
+14.gif
+15.gif
+16.gif
+17.gif
+18.gif
+19.gif
+2.gif
+20.gif
+21.gif
+22.gif
+3.gif
+4.gif
+5.gif
+6.gif
+7.gif
+8.gif
+9.gif
+[24/Oct/2013 23:20:05] "POST /admin/imagestore/albumupload/add/ HTTP/1.1" 302 0
+[24/Oct/2013 23:20:05] "GET /admin/ HTTP/1.1" 200 6464
+[24/Oct/2013 23:20:14] "GET /gallery/ HTTP/1.1" 200 6464
+[24/Oct/2013 23:20:14] "GET /media/static/autocomplete_light/addanother.js HTTP/1.1" 304 0
+[24/Oct/2013 23:20:14] "GET /media/static/autocomplete_light/autocomplete.js HTTP/1.1" 304 0
+[24/Oct/2013 23:20:14] "GET /media/static/css/style.css HTTP/1.1" 404 1655
+[24/Oct/2013 23:20:14] "GET /media/static/autocomplete_light/widget.js HTTP/1.1" 304 0
+[24/Oct/2013 23:20:14] "GET /media/static/autocomplete_light/text_widget.js HTTP/1.1" 304 0
+[24/Oct/2013 23:20:14] "GET /media/static/autocomplete_light/remote.js HTTP/1.1" 304 0
+[24/Oct/2013 23:20:14] "GET /media/static/autocomplete_light/style.css HTTP/1.1" 304 0
+[24/Oct/2013 23:20:14] "GET /media/cache/f2/91/f291591e116fe6fabce38ddd8f7861ad.jpg HTTP/1.1" 200 13325
+[24/Oct/2013 23:20:36] "GET /gallery/album/1/ HTTP/1.1" 200 16656
+[24/Oct/2013 23:20:36] "GET /media/static/css/style.css HTTP/1.1" 404 1655
+[24/Oct/2013 23:20:36] "GET /media/cache/5a/49/5a494dd5b4b0c75c7de7e85180774502.jpg HTTP/1.1" 200 8249
+[24/Oct/2013 23:20:36] "GET /media/cache/16/14/161455eb372ec0a04e2a9165f87f2169.jpg HTTP/1.1" 200 9190
+[24/Oct/2013 23:20:36] "GET /media/cache/f1/11/f111ec043fe058aec17bd0aca741c474.jpg HTTP/1.1" 200 7468
+[24/Oct/2013 23:20:36] "GET /media/cache/43/25/4325931274ab163d29f9cf0f74d64773.jpg HTTP/1.1" 200 7357
+[24/Oct/2013 23:20:36] "GET /media/cache/c3/a3/c3a369cbdb66528b1c679f94cca6caac.jpg HTTP/1.1" 200 8716
+[24/Oct/2013 23:20:36] "GET /media/cache/6a/00/6a002fcf7e4b07f4d427ac9aef0e48f1.jpg HTTP/1.1" 200 7361
+[24/Oct/2013 23:20:36] "GET /media/cache/94/c6/94c67ac563c56c92de45ea9813114af5.jpg HTTP/1.1" 200 8142
+[24/Oct/2013 23:20:36] "GET /media/cache/db/39/db399750c2d460e3dd9ec2b08ebc2265.jpg HTTP/1.1" 200 9953
+[24/Oct/2013 23:20:36] "GET /media/cache/fb/e2/fbe2500210acf877015a56f02f996923.jpg HTTP/1.1" 200 7515
+[24/Oct/2013 23:20:36] "GET /media/cache/fe/bd/febddf802027f5cea287ca494e7e82fc.jpg HTTP/1.1" 200 6434
+[24/Oct/2013 23:20:36] "GET /media/cache/51/20/51206d677efecbba909f67a5cdf130f0.jpg HTTP/1.1" 200 8219
+[24/Oct/2013 23:20:36] "GET /media/cache/f6/56/f65639f23f6dcb7f60d9a0fcee4447a0.jpg HTTP/1.1" 200 9268
+[24/Oct/2013 23:20:36] "GET /media/cache/12/01/1201f2212d99398dac188d7389488ee8.jpg HTTP/1.1" 200 8626
+[24/Oct/2013 23:20:36] "GET /media/cache/db/d3/dbd31bb17231aabd1af75f42e66a0dd1.jpg HTTP/1.1" 200 8889
+[24/Oct/2013 23:20:36] "GET /media/cache/f1/c9/f1c97c6a6a3995f3c0844906aaf571bc.jpg HTTP/1.1" 200 8746
+[24/Oct/2013 23:20:36] "GET /media/cache/e8/d3/e8d3c57e29a32df2bece3dfa74a7d230.jpg HTTP/1.1" 200 8065
+[24/Oct/2013 23:20:36] "GET /media/cache/c5/8a/c58a557a2f98dc81b7b72ea222c1913c.jpg HTTP/1.1" 200 8512
+[24/Oct/2013 23:20:36] "GET /media/cache/fd/ca/fdca8818cfaaf5c1b68eacd0f385addf.jpg HTTP/1.1" 200 9623
+[24/Oct/2013 23:20:36] "GET /media/cache/20/5d/205d40f0fc5880bcafa27c603b0f774a.jpg HTTP/1.1" 200 8067
+[24/Oct/2013 23:20:36] "GET /media/cache/b0/74/b074f997c09748df301035006825df12.jpg HTTP/1.1" 200 9316
+[24/Oct/2013 23:21:04] "GET /media/imagestore/cca6a3a1-d17e-45f1-aa4f-7cd89d9608b5.gif HTTP/1.1" 200 169423
+[24/Oct/2013 23:21:15] "GET /media/imagestore/cca6a3a1-d17e-45f1-aa4f-7cd89d9608b5.gif HTTP/1.1" 304 0
+
+(env)testapp$> elinks -dump http://localhost:8000/gallery/album/1/ | head -22
+[24/Oct/2013 23:23:17] "GET /gallery/album/1/ HTTP/1.1" 200 16100
+   [1]Django gallery solution
+
+     * [2]Code
+     * [3]Download
+     * [4]Documentation
+
+     * [5]Home /
+     * [6]Gallery /
+     * Album: deti
+
+                                  Album: deti
+
+     * [7]← previous page
+     * [8]next page →
+
+   [9][IMG] [10]Info
+   [11][IMG] [12]Info
+   [13][IMG] [14]Info
+   [15][IMG] [16]Info
+   [17][IMG] [18]Info
+   [19][IMG] [20]Info
+   [21][IMG] [22]Info
+
+(env)testapp$> 
